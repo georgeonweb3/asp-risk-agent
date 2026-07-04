@@ -1,0 +1,19 @@
+{
+  "name": "asp-risk-agent",
+  "version": "0.1.0",
+  "description": "Autonomous counterparty-risk agent for OKX.AI Genesis Hackathon — screens wallets via BasePulse trust scores before executing transactions",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "demo": "node demo/simulate.js",
+    "register-agent": "node scripts/registerAgent.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "@coinbase/coinbase-sdk": "^0.10.0",
+    "viem": "^2.21.0"
+  }
+}
