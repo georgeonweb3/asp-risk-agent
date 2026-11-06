@@ -33,6 +33,20 @@ This hits three addresses that land in the block / flag / approve bands and
 prints a clean, narratable log — record your terminal (or screen-record the
 Termux session) for the #okxai submission video.
 
+## Run the tests
+
+```bash
+npm test
+```
+
+The suite uses Node's built-in test runner (no extra dependencies) and runs
+fully offline in mock mode — no API keys, wallets or funds needed. It covers
+the decision engine's thresholds and boundaries (block / flag / approve, the
+$5,000 auto-approve cap, missing-score fail-safe), the mock scorer's
+determinism, the wallet executor's never-execute rules for block and flag,
+and an end-to-end pass over the real server's `POST /check` and
+`GET /health` endpoints.
+
 ## Wiring in the real BasePulse API
 
 Edit `src/basepulseClient.js` — replace the mock branch's usage with your
